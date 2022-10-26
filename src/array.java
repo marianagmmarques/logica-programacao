@@ -1,6 +1,7 @@
-import java.util.Random;
-
 public class array {
+    /**
+     * @param args
+     */
     public static void main(String[] args) {
         String[] pessoas = {"Chaves","Seu Madruga","Dona Florinda","Kiko","Chiquinha"};
         System.out.println(pessoas.length);
