@@ -2,8 +2,8 @@ import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
 
-public class array05 {
-    // Desafio incluir a opção alterar
+public class array04 {
+    // Desafio incluir a opção alterar!
     public static void main(String[] args) {
         //ArrayList é uma classe java mais flexivel para manipular uma lista.
         ArrayList<String> lista = new ArrayList<String>();
