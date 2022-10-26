@@ -8,17 +8,17 @@ public class array04 {
         //ArrayList é uma classe java mais flexivel para manipular uma lista.
         ArrayList<String> lista = new ArrayList<String>();
         int seleciona = 0;
-        Object[] opcoes = {"Incluir", "Listar", "Apagar", "Finalizar"};
+        Object[] opcoes = {"Incluir", "Listar", "Alterar", "Apagar", "Finalizar"};
 
         do {
             seleciona = JOptionPane.showOptionDialog(null, "O que Deseja?", "Exemplo", 
             JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE, null, opcoes, opcoes[0]);
-
+            //Incluir
             if (seleciona == 0) { //opcao[Selciona].equals("Incluir")
                 String item = JOptionPane.showInputDialog("Digite:");
                 lista.add(item); //Guarda o que foi digitado
             }
-
+            //Listar
             if (seleciona == 1) {
                 String msg = "";
 
@@ -26,9 +26,29 @@ public class array04 {
                     msg += item + "\n";
                 }
                 JOptionPane.showConfirmDialog(null, msg);
-            }  
+            }
 
+            //Alterar
             if (seleciona == 2) {
+                Object[] listaAlt = new Object[lista.size()];
+                
+                for (int i = 0; i < listaAlt.length; i++) {
+                    listaAlt[i] = lista.get(i);
+                }
+
+                Object itemSelecionado = JOptionPane.showInputDialog(null, "Selecione o item a ser alterado", 
+                "Alterar", JOptionPane.INFORMATION_MESSAGE, null, listaAlt, listaAlt[0]);
+
+                String itemAlt = JOptionPane.showInputDialog("Digite");
+
+                for (int i = 0; i < listaAlt.length; i++) {
+                        if(itemSelecionado.equals(lista.get(i)))
+                            lista.set(i, itemAlt);
+                        }   
+            } 
+
+            //Apagar
+            if (seleciona == 3) {
                 Object[] listaItem = new Object[lista.size()];
 
                 for (int i = 0; i < listaItem.length; i++) {
@@ -43,7 +63,8 @@ public class array04 {
                     }
                 }
             }
-        } while (seleciona != 3);
+        //Finalizar
+        } while (seleciona != 4);
 
     }
 }
