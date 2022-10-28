@@ -39,7 +39,6 @@ public class array04 {
             //Alterar
             if (seleciona == 2 /*&& lista.size() > 0*/) {
                 if (lista.size() > 0) {
-
                     Object[] listaAlt = new Object[lista.size()];
                 
                 for (int i = 0; i < listaAlt.length; i++) {
@@ -49,13 +48,12 @@ public class array04 {
                 Object itemSelecionado = JOptionPane.showInputDialog(null, "Selecione o item a ser alterado", 
                 "Alterar", JOptionPane.INFORMATION_MESSAGE, null, listaAlt, listaAlt[0]);
 
-                String itemAlt = JOptionPane.showInputDialog("Digite:");
-
                 for (int i = 0; i < listaAlt.length; i++) {
-                        if(itemSelecionado != null && itemSelecionado.equals(lista.get(i)))
+                        if(itemSelecionado != null && itemSelecionado.equals(lista.get(i))){
+                            String itemAlt = JOptionPane.showInputDialog("Digite:");
                             lista.set(i, itemAlt);
                         }   
-
+                    }   
             } else {
                 JOptionPane.showMessageDialog(null, "Não possível fazer alteração nenhum item na lista.");
             }
