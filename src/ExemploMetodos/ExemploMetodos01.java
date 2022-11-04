@@ -1,3 +1,5 @@
+package ExemploMetodos;
+
 public class ExemploMetodos01 {
     public static void main(String[] args) {
         ExemploMetodos00.boasVindas();

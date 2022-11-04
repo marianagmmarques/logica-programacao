@@ -1,19 +1,28 @@
 package ExemploPOO;
 
-public class Exemplo00 {
-    public static void main(String[] args) {
-        Caneta caneta1 = new Caneta("BIC","Azul");
-        caneta1.printStatus();
-        caneta1.rabiscar();
-        caneta1.printStatus();
-        caneta1.destampar();
-        caneta1.rabiscar();
-        caneta1.printStatus();
-        caneta1.escrever("Luiz Felipe Freire Maia");
-        caneta1.printStatus();
-        caneta1.escrever("Luiz");
-        caneta1.printStatus();
-        Caneta caneta2 = new Caneta("BIC", "Preta");
-        caneta2.printStatus();
+public class Carro extends Veiculo {
+
+    private int portas;
+
+    Carro(String marca, String modelo) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.portas = 2;
+    }
+
+    Carro(String marca, String modelo, int portas) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.portas = portas;
+    }
+
+    @Override
+    public String toString() {
+        return "Carro [marca=" + marca + ", modelo=" + modelo + ", velocidade=" + velocidade + ", portas=" + portas
+                + "]";
+    }
+
+    public void printStatus() {
+        System.out.println(toString());
     }
 }

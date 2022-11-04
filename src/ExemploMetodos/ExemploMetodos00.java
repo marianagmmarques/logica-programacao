@@ -1,3 +1,5 @@
+package ExemploMetodos;
+
 public class ExemploMetodos00 {
     //public static void main(String[] args) {
     //    //System.out.println("Teste".equals("TESTE"));
