@@ -1,3 +1,5 @@
+package ExemploMetodos;
+
 public class ExemploMetodos02 {
     public static void main(String[] args) {
         int nFinal = somaRecursiva(15);
